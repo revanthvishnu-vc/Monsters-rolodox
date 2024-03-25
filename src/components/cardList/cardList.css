@@ -2,6 +2,34 @@
   width: 85vw;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .card-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-list {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-list {
+    grid-template-columns: 1fr; /* Display one card per row */
+    grid-gap: 5px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  .card-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 10px;
+  }
 }

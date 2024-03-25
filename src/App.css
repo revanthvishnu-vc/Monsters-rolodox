@@ -14,10 +14,18 @@ body {
   text-align: center;
 }
 
-.app-title{
-  margin-top: 75px;
-  margin-bottom: 50px;
-  font-size: 76px;
-  color: #0ccac4 ;
+.app-title {
+  margin-top: 10vw; /* Adjust margin based on viewport width */
+  margin-bottom: 5vw; /* Adjust margin based on viewport width */
+  font-size: 6vw; /* Adjust font size based on viewport width */
+  color: #0ccac4;
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .app-title {
+    margin-top: 50px; /* Reset margin for smaller screens */
+    margin-bottom: 30px; /* Reset margin for smaller screens */
+    font-size: 42px; /* Reset font size for smaller screens */
+  }
+}
